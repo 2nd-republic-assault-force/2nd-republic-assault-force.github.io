@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/2nd-republic-assault-force.github.io/static/css/main.a617e044.chunk.css",
+    "main.js": "/2nd-republic-assault-force.github.io/static/js/main.00f5f87f.chunk.js",
+    "main.js.map": "/2nd-republic-assault-force.github.io/static/js/main.00f5f87f.chunk.js.map",
+    "runtime-main.js": "/2nd-republic-assault-force.github.io/static/js/runtime-main.a08187ca.js",
+    "runtime-main.js.map": "/2nd-republic-assault-force.github.io/static/js/runtime-main.a08187ca.js.map",
+    "static/js/2.ac181aef.chunk.js": "/2nd-republic-assault-force.github.io/static/js/2.ac181aef.chunk.js",
+    "static/js/2.ac181aef.chunk.js.map": "/2nd-republic-assault-force.github.io/static/js/2.ac181aef.chunk.js.map",
+    "static/js/3.f64a29de.chunk.js": "/2nd-republic-assault-force.github.io/static/js/3.f64a29de.chunk.js",
+    "static/js/3.f64a29de.chunk.js.map": "/2nd-republic-assault-force.github.io/static/js/3.f64a29de.chunk.js.map",
+    "index.html": "/2nd-republic-assault-force.github.io/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/2nd-republic-assault-force.github.io/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.ac181aef.chunk.js.LICENSE.txt": "/2nd-republic-assault-force.github.io/static/js/2.ac181aef.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/2nd-republic-assault-force.github.io/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a08187ca.js",
+    "static/js/2.ac181aef.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.00f5f87f.chunk.js"
+  ]
+}
