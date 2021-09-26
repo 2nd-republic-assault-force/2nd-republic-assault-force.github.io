@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import outfitLogo from './assets/images/2raflogo.png'
 import './App.css';
+import { LinkBox } from './components/LinkBox/LinkBox'
+import { ThemeProvider } from '@material-ui/styles';
+import { createTheme } from '@material-ui/core/styles';
+import { colors, Link } from '@material-ui/core/';
+import {LinkFooter} from './components/LinkFooter/LinkFooter'
 
 function App() {
+
+  const defaultTheme = createTheme({
+    palette: {
+      primary: colors.red,
+      secondary: colors.yellow
+    }
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <ThemeProvider theme={defaultTheme}>
+      <div className="App">
+        <header className="App-header">
+          <img src={outfitLogo} alt="logo" />
+          <LinkFooter/>
+        </header>
+      </div>
+      </ThemeProvider>
   );
 }
 
