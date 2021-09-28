@@ -1,5 +1,4 @@
-import { Button, Link } from "@material-ui/core";
-import { Redirect, useHistory } from "react-router";
+import { Button } from "@material-ui/core";
 import { useStyles }from './styles'
 type LinkBoxProps = {
     destinationLink: string;
@@ -10,7 +9,8 @@ export const LinkBox = (props: LinkBoxProps) => {
     
     const classes = useStyles();
     
-    return (<Button
+    return (
+    <Button
         color="primary"
         variant="contained"
         className={classes.button}
@@ -20,6 +20,5 @@ export const LinkBox = (props: LinkBoxProps) => {
       >
         {props.text}
       </Button>
-      )
-
+    )
 }

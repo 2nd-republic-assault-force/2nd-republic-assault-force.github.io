@@ -1,28 +1,30 @@
-import React from 'react';
-import outfitLogo from './assets/images/2raflogo.png'
 import './App.css';
-import { LinkBox } from './components/LinkBox/LinkBox'
 import { ThemeProvider } from '@material-ui/styles';
 import { createTheme } from '@material-ui/core/styles';
-import { colors, Link } from '@material-ui/core/';
-import {LinkFooter} from './components/LinkFooter/LinkFooter'
-
+import { colors } from '@material-ui/core/';
+import {MainRouter} from './components/MainRouter/MainRouter'
+import { BrowserRouter } from 'react-router-dom';
 function App() {
 
   const defaultTheme = createTheme({
     palette: {
-      primary: colors.red,
-      secondary: colors.yellow
+      primary: {
+                light: '#c3333d',
+                main: '#b5000d',
+                dark: '#7e0009'
+              },
+      secondary: {
+                  main: '#ffc107',
+                },
     }
   });
 
   return (
       <ThemeProvider theme={defaultTheme}>
       <div className="App">
-        <header className="App-header">
-          <img src={outfitLogo} alt="logo" />
-          <LinkFooter/>
-        </header>
+        <BrowserRouter>
+          <MainRouter/>
+        </BrowserRouter>
       </div>
       </ThemeProvider>
   );

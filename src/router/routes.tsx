@@ -1,7 +1,16 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Homepage } from "../pages/Homepage";
 
-          <Route path='/youtube' component={() => { 
-            window.location.href = 'https://www.youtube.com'; 
-            return null;
-          }}/>
+
+type Route = {
+  path: string;
+  component: React.FC;
+}
+
+
+export const generalRoutes:Record<string, Route> = {
+    HomePage: {
+      path:'/',
+      component: Homepage
+    },
+}

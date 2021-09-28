@@ -6,6 +6,9 @@ export const useStyles = makeStyles((theme) => ({
     container :{
         display:"flex",
         flexDirection:"column",
+    },
+    textBlock: {
+        maxWidth:'50px'
     }
 
 }));

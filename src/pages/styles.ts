@@ -3,9 +3,12 @@ import {
   } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
-    button: {
-      color:'black',
-      margin:'5px'
+    container :{
+        display:"flex",
+        flexDirection:"column",
+    },
+    textBlock: {
+        maxWidth:'400px'
     }
 
 }));
