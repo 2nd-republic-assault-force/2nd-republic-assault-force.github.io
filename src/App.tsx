@@ -3,6 +3,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import { createTheme } from '@material-ui/core/styles';
 import {MainRouter} from './components/MainRouter/MainRouter'
 import { BrowserRouter } from 'react-router-dom';
+import Firebase, { FirebaseContext } from './components/Firebase';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -13,19 +14,18 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBtdibWcl2SCwAdoiYZg5btsIPbfbIahrw",
-  authDomain: "raf-website-742bb.firebaseapp.com",
-  projectId: "raf-website-742bb",
-  storageBucket: "raf-website-742bb.appspot.com",
-  messagingSenderId: "709425852660",
-  appId: "1:709425852660:web:9dc8153728e2fa350f6ea1",
-  measurementId: "G-1M1CM124EX"
+  apiKey: process.env.REACT_APP_APIKEY  ,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
+  measurementId:process.env.REACT_APP_MEASUREMENTID
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
 
 
 function App() {
@@ -44,13 +44,15 @@ function App() {
   });
 
   return (
+    <FirebaseContext.Provider value={new Firebase()}>
       <ThemeProvider theme={defaultTheme}>
-      <div className="App">
-        <BrowserRouter>
-          <MainRouter/>
-        </BrowserRouter>
-      </div>
+        <div className="App">
+          <BrowserRouter>
+            <MainRouter/>
+          </BrowserRouter>
+        </div>
       </ThemeProvider>
+    </FirebaseContext.Provider>
   );
 }
 
