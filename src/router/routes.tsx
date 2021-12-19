@@ -1,5 +1,6 @@
 import React from "react";
 import { Homepage } from "../pages/HomePage/Homepage";
+import { PhotoGallery } from "../pages/PhotoGallery/Index";
 
 
 type Route = {
@@ -13,4 +14,8 @@ export const generalRoutes:Record<string, Route> = {
       path:'/',
       component: Homepage
     },
+    PhotoGallery :{
+      path:'/photos',
+      component: PhotoGallery,
+    }
 }
