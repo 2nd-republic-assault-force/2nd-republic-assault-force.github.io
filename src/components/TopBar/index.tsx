@@ -1,34 +1,18 @@
-import { Button } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
 import { useStyles } from "./styles";
-
-
+import { LinkButton } from "../LinkButton";
 
 export const TopBar: React.FC = (props) => {
+  const classNames = useStyles();
 
-    const history = useHistory()
-    const classNames = useStyles();
-    
-    //add 4 buttons for the different links
-
- return (<><div className={classNames.container} >
-        <Button variant='contained' color='primary' className={classNames.button} onClick={(event) => {
-            history.push('/')
-        }}>
-            Home
-        </Button >
-        <Button  variant='contained' color='primary' className={classNames.button} onClick={(event) => {
-            history.push('/photos')
-        }}>
-            Photo Gallery
-        </Button>
-        <Button  variant='contained' color='primary' className={classNames.button}>
-            2RAF Streamers
-        </Button>
-        <Button  variant='contained' color='primary' className={classNames.button}>
-            Stats
-        </Button>
-    </div>
-    {props.children}
-    </>)
-}
+  return (
+    <>
+      <div className={classNames.container}>
+        <LinkButton link="/" text="Home" />
+        <LinkButton link="/photos" text="Photo Gallery" />
+        <LinkButton link="/photos" text="2RAF Streamers" />
+        <LinkButton link="/stats" text="Stats" />
+      </div>
+      {props.children}
+    </>
+  );
+};
