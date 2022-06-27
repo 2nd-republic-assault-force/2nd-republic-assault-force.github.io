@@ -1,7 +1,5 @@
+import { Rest } from "ps2census";
+
 export type AppContext = {
-  firebase: {
-    db: FirebaseFirestore.Firestore;
-    projectId: string;
-    credentials: Credential;
-  };
+  census: Rest.Client;
 };

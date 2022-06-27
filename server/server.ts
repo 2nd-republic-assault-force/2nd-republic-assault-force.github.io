@@ -3,6 +3,8 @@ import { initializeApp, applicationDefault, cert } from "firebase-admin/app";
 import { getFirestore, Timestamp, FieldValue } from "firebase-admin/firestore";
 import { opStatsImportHandler } from "./lib/handlers/opstats-import-handler";
 import { AppContext } from "./appContext";
+import { Rest } from "ps2census";
+import { getMapImagesHandler } from "./lib/handlers/get-map-images-handler";
 
 const serviceAccount = require("./service-account.json");
 
@@ -13,8 +15,11 @@ initializeApp({
 });
 
 // how do we build the app context in the dev portal
-console.log(serviceAccount);
+
 const db = getFirestore();
+const appContext: AppContext = {
+  census: new Rest.Client("ps2", { serviceId: "example" }),
+};
 
 const app = express();
 const port = 5000;
@@ -24,28 +29,17 @@ app.get("/", (req, res) => {
   console.log("request recieved");
 });
 
+app.get("/api/maps", (req, res) => {
+  const responseBody = getMapImagesHandler(req, res, appContext);
+  console.log("request recieved");
+  res.send(responseBody);
+});
+
 app.post("/opstats", (req, res) => {
   const responseBody = opStatsImportHandler(req, res);
   console.log("request recieved");
   res.send(responseBody);
 });
-
-// const server = http.createServer(async function (req, res) {
-//   if (req.url === "/") {
-//     //check the URL of the current request
-//     // set response header
-//     res.writeHead(200, { "Content-Type": "text/html" });
-
-//     const snapshot = await db.collection("users").get();
-//     snapshot.forEach((doc) => {
-//       console.log(doc.id, "=>", doc.data());
-//     });
-
-//     // set response content
-//     res.write("<html><body><p>This is home Page.</p></body></html>");
-//     res.end();
-//   }
-// });
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
