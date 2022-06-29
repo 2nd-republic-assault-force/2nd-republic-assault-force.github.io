@@ -6,4 +6,6 @@ export const PhotoGallery = () =>{
     
     const classes = useStyles()
     
-    return (<TopBar></TopBar>)}
+    return (<TopBar>
+        
+    </TopBar>)}
