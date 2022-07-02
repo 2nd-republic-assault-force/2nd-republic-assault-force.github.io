@@ -1,5 +1,5 @@
-import { Rest } from "ps2census";
+import { CensusClient, Rest } from "ps2census";
 
 export type AppContext = {
-  census: Rest.Client;
+      census: { rest: Rest.Client; stream: CensusClient };
 };
