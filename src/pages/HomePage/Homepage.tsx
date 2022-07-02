@@ -1,12 +1,11 @@
 import { LinkFooter } from "../../components/LinkFooter";
 import outfitLogo from "../../assets/images/2raflogo.png";
-import { Typography } from "@material-ui/core";
+import { Typography, useTheme } from "@material-ui/core";
 import { useStyles } from "./styles";
 import { TopBar } from "../../components/TopBar";
 
 export const Homepage: React.FC = () => {
       const classes = useStyles();
-
       return (
             <div>
                   <TopBar>
