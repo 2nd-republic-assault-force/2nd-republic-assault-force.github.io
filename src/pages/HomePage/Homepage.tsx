@@ -6,7 +6,6 @@ import { TopBar } from "../../components/TopBar";
 
 export const Homepage: React.FC = () => {
       const classes = useStyles();
-
       return (
             <div>
                   <TopBar>
