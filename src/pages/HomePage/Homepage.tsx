@@ -1,6 +1,6 @@
 import { LinkFooter } from "../../components/LinkFooter";
 import outfitLogo from "../../assets/images/2raflogo.png";
-import { Typography, useTheme } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { useStyles } from "./styles";
 import { TopBar } from "../../components/TopBar";
 
