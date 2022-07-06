@@ -1,9 +1,10 @@
-import React from "react";
+import { ImageCollage } from "../../components/ImageCollage";
 import { TopBar } from "../../components/TopBar";
-// import { useStyles } from "./styles";
 
 export const PhotoGallery = () => {
-      // const classes = useStyles();
-
-      return <TopBar></TopBar>;
+      return (
+            <TopBar>
+                  <ImageCollage />
+            </TopBar>
+      );
 };

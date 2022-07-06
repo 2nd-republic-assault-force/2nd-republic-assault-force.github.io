@@ -20,6 +20,9 @@ export const useStyles = makeStyles((theme) => ({
       children: {
             backgroundColor: theme.palette.secondary.dark,
             minHeight: "96vh",
+            maxHeight: "100%",
+            maxWidth: "100%",
+            overflow: "scroll",
             color: theme.palette.secondary.main,
       },
 }));
