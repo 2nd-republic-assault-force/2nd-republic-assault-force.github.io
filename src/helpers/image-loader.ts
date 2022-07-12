@@ -3,10 +3,6 @@ import image2 from "../assets/images/screenshots/image-2.png";
 import image3 from "../assets/images/screenshots/image-3.png";
 import image4 from "../assets/images/screenshots/image-4.png";
 import image5 from "../assets/images/screenshots/image-5.jpeg";
-import image6 from "../assets/images/screenshots/image-6.png";
-import image7 from "../assets/images/screenshots/image-7.jpeg";
-import image8 from "../assets/images/screenshots/image-8.png";
-import image9 from "../assets/images/screenshots/image-9.jpeg";
 
 const loadLoacalCollection = () => {
       const images = [

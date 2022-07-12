@@ -1,6 +1,4 @@
-import { Box, ImageListItem } from "@material-ui/core";
-import { ImageList } from "@mui/material";
-// import { useEffect } from "react";
+import { Box } from "@material-ui/core";
 import { ImageLoader } from "../../helpers/image-loader";
 import { useStyles } from "./styles";
 
